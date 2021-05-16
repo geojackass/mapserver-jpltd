@@ -1,0 +1,12 @@
+version: '3'
+services:
+  mapserver:
+    build:
+      context: .
+      #イメージ元はdockerhubではなく，Dirのdockerfileそのものを参照する
+      # dockerfile: Dockerfile
+    # image: gdal:latest
+    ports:
+    - "8080:80"
+    volumes:
+    - .:/workdir

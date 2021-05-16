@@ -1,0 +1,93 @@
+MAP
+  # DEBUG 2
+  # CONFIG "MS_ERRORFILE" "/ms4w/tmp/ms_error.txt"
+
+  WEB
+    METADATA
+      "wms_title" "geojackass_map"
+      # "wms_onlineresource" "http://localhost/cgi-bin/mapserv.exe?map=../htdocs/mapserver/medarea.map&"
+      "wms_onlineresource" "http://localhost:8080/?map=/usr/local/share/mapserver/examples/geojackass.map&"
+      "wms_srs" "EPSG:4326"
+      "ows_enable_request" "*"
+    END
+
+    # IMAGEPATH "/ms4w/tmp/ms_tmp/"
+    # IMAGEURL "/ms_tmp/"
+  END
+
+  # データフォルダを相対パスで指定
+  SHAPEPATH   "data" 
+
+  FONTSET "fonts/fonts.list"
+
+  PROJECTION
+    "init=epsg:4326" # WGS84
+  END
+
+  # IMAGETYPE,SIZEはWMSパラメータで指定するので
+  # ここは意味が無くなる
+  # IMAGETYPE   PNG
+  # IMAGECOLOR  255 255 255
+  # SIZE        500 400
+
+  #simplyfied wgs84 jp
+  LAYER 
+    NAME "jpn_smpl" #layer name
+    DATA wgs84_jp_smpl #shp file name
+    STATUS ON
+    TYPE LINE
+
+    CLASS
+      STYLE 
+        COLOR 64 64 64
+        WIDTH 1.0
+      END
+    END
+  END
+
+  #海流sample1
+  LAYER 
+    NAME "qboc2018184k_Line" #layer name
+    DATA qboc2018184k_Line #shp file name
+    STATUS ON
+    TYPE LINE
+
+    CLASS
+      STYLE 
+        COLOR 64 64 255
+        WIDTH 3.0
+      END
+    END
+  END 
+  
+  #海流sample2
+  LAYER 
+    NAME "qboc2018185k_Line" #layer name
+    DATA qboc2018185k_Line #shp file name
+    STATUS ON
+    TYPE LINE
+
+    CLASS
+      STYLE 
+        COLOR 64 64 255
+        WIDTH 3.0
+      END
+    END
+  END
+
+  #海流sample3
+  LAYER 
+    NAME "qboc2018186k_Line" #layer name
+    DATA qboc2018186k_Line #shp file name
+    STATUS ON
+    TYPE LINE
+
+    CLASS
+      STYLE 
+        COLOR 64 64 255
+        WIDTH 3.0
+      END
+    END
+  END
+
+END 
