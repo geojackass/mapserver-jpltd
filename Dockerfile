@@ -14,8 +14,8 @@ USER root
 EXPOSE 80
 
 # COPY DATA SETS
-COPY data/ /usr/local/share/mapserver/examples/
-COPY fonts/ /usr/local/share/mapserver/examples/
+COPY data /usr/local/share/mapserver/examples/
+COPY fonts /usr/local/share/mapserver/examples/
 COPY geojackass.map /usr/local/share/mapserver/examples/
 
 # Start the fcgi and web servers.
