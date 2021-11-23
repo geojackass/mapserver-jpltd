@@ -5,7 +5,12 @@ MAP
   WEB
     METADATA
       "wms_title" "geojackass_map"
+      ### windowsでmapserverを使用する場合の設定ファイル
       # "wms_onlineresource" "http://localhost/cgi-bin/mapserv.exe?map=../htdocs/mapserver/medarea.map&"
+      
+      ##############################################################################
+      #####linuxでmapserverを使用する場合の設定ファイル IPアドレスを確認後変更を行う#####
+      ##############################################################################
       "wms_onlineresource" "http://localhost:8080/?map=/usr/local/share/mapserver/examples/geojackass.map&"
       "wms_srs" "EPSG:4326"
       "ows_enable_request" "*"
