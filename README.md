@@ -19,7 +19,7 @@ to port `8080` on the host:
 ```
 
 ### Setup
-
+##### check and put your IP addr in the map file at first
 You can then test using the included example mapfile by pointing your browser at
 ```
 http://localhost:8080/?map=/usr/local/share/mapserver/examples/geojackass.map&mode=map
